@@ -1,0 +1,68 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# VSCode
+
+/.vscode
+
+# Frontend
+
+## dependencies
+/frontend/node_modules
+/frontend/.pnp
+/frontend/.pnp.js
+
+## testing
+/frontend/coverage
+
+## next.js
+/frontend/.next/
+/frontend/out/
+
+## production
+/frontend/build
+
+## misc
+/frontend/.DS_Store
+/frontend/*.pem
+
+## debug
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+
+## local env files
+/frontend/.env.local
+/frontend/.env.development.local
+/frontend/.env.test.local
+/frontend/.env.production.local
+
+## vercel
+/frontend/.vercel
+
+## typescript
+/frontend/*.tsbuildinfo
+
+## cypress
+/frontend/cypress/screenshots/
+frontend/cypress/videos/
+
+# Backend
+
+/backend/research_exchange/Thumbs.db
+/backend/research_exchange/.DS_Store
+/backend/research_exchange/.gradle
+/backend/research_exchange/build/
+/backend/research_exchange/bin/
+/backend/research_exchange/target/
+/backend/research_exchange/out/
+/backend/research_exchange/.idea
+/backend/research_exchange/*.iml
+/backend/research_exchange/*.ipr
+/backend/research_exchange/*.iws
+/backend/research_exchange/.project
+/backend/research_exchange/.settings
+/backend/research_exchange/.classpath
+/backend/research_exchange/.factorypath
+/backend/research_exchange/gradle\wrapper\gradle-wrapper.jar
+/backend/research_exchange/gradle\wrapper\gradle-wrapper.properties
+*.class
