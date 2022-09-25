@@ -1,0 +1,71 @@
+@use "constants";
+
+.pagination {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &::after {
+    content: "";
+    width: 250px;
+  }
+}
+
+.itemsPerPage {
+  margin-right: 50px;
+  width: 200px;
+
+  label {
+    margin-right: 10px;
+  }
+}
+
+.pageButtons {
+  display: flex;
+  justify-content: center;
+
+  a {
+    color: black;
+    background-color: #f4f4f4;
+    border: 1px solid #bbb;
+
+    &.leftOfCurrent {
+      border-right: none;
+    }
+
+    &.rightOfCurrent {
+      border-left: none;
+    }
+
+    &.currentPage {
+      background-color: constants.$themeColor3;
+      color: white;
+      border: 1px solid constants.$themeColor3;
+      border-right-width: 2px;
+    }
+  }
+}
+
+.pageButton {
+  padding: 6px 14px;
+
+  $endBorderRadius: 8px;
+
+  &:first-child {
+    border-top-left-radius: $endBorderRadius;
+    border-bottom-left-radius: $endBorderRadius;
+    border-right: none;
+  }
+
+  &:last-child {
+    border-top-right-radius: $endBorderRadius;
+    border-bottom-right-radius: $endBorderRadius;
+    border-left: none;
+  }
+}
+
+.disabledArrow {
+  border: 1px solid #ddd;
+  color: #aaa;
+}

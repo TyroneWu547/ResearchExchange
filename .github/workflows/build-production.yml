@@ -1,0 +1,34 @@
+name: Build to Production
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  deploy-frontend:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build Frontend Server
+        run: |
+          echo Building and deploying frontend...
+          # may need to set this up, also add forever
+          cd 2022SpringTeam35-Oracle/frontend/
+          npm stop
+          npm ci
+          npm run build
+          npm run start -- -p 9000
+  deploy-backend:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build Backend Server
+        run: |
+          echo Building and deploying backend...
+          cd 2022SpringTeam35-Oracle/backend/research_exchange/
+          gradle --stop
+          ./gradlew clean
+          MICRONAUT_ENVIRONMENTS=oraclecloud ./gradlew --daemon run

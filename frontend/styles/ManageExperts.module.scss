@@ -1,0 +1,80 @@
+@use "constants";
+@use "mixins";
+
+.expertTitle {
+  margin-bottom: 10px;
+  margin-top: 30px;
+  font-size: 28px;
+}
+
+.assignNewExpert {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  input[type=text] {
+    font-size: 14px;
+    width: 400px;
+  }
+}
+
+.expertsTable {
+  width: 100%;
+  border-collapse: collapse;
+
+  thead {
+    text-align: left;
+  }
+
+  th,
+  td {
+    padding: 10px 10px 10px 0;
+  }
+}
+
+.expertRow {
+  border-top: 1px solid #aaa;
+}
+
+.requestReasonCell {
+  max-width: 400px;
+}
+
+.assignExpertCell {
+  width: 0;
+  white-space: nowrap;
+
+  .accept {
+    $color: darken(constants.$themeColor3, 15%);
+    @include mixins.roundedBtn($color);
+    font-size: 14px;
+    padding: 4px 6px;
+    border: 1px solid darken($color, 25%);
+  }
+
+  .reject {
+    margin-left: 10px;
+    $color: rgb(211, 119, 119);
+    @include mixins.roundedBtn($color);
+    font-size: 14px;
+    padding: 4px 6px;
+    border: 1px solid darken($color, 25%);
+  }
+}
+
+.removeExpertCell {
+  width: 0;
+  white-space: nowrap;
+
+  button {
+    $color: rgb(211, 119, 119);
+    @include mixins.roundedBtn($color);
+    font-size: 14px;
+    padding: 4px 6px;
+    border: 1px solid darken($color, 25%);
+  }
+}
+
+.username {
+  color: constants.$themeColor3;
+}

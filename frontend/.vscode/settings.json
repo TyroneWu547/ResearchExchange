@@ -1,0 +1,6 @@
+{
+    "editor.tabSize": 2,
+    "java.completion.enabled": false,
+    "java.debug.settings.enableRunDebugCodeLens": false,
+    "java.test.editor.enableShortcuts": false
+}

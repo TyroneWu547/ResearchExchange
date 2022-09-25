@@ -1,0 +1,25 @@
+.statuses {
+  margin-top: 10px;
+}
+
+@mixin statusButton($color) {
+  background-color: $color;
+  border-color: darken($color, 20%);
+
+  &:hover {
+    cursor: pointer;
+    background-color: darken($color, 10%);
+  }
+}
+
+.acceptStatusButton {
+  @include statusButton(rgb(131, 221, 131));
+}
+
+.needsWorkStatusButton {
+  @include statusButton(rgb(240, 202, 121));
+}
+
+.rejectStatusButton {
+  @include statusButton(rgb(218, 108, 108));
+}

@@ -1,0 +1,21 @@
+@use "constants";
+
+.sectionName {
+    color: constants.$themeColor4;
+    font-size: 30px;
+}
+
+.sectionContent {
+    li {
+        margin: 16px 0px;
+    }
+
+    a {
+        color: constants.$themeColor4;
+        text-decoration: underline;
+
+        &:hover {
+            color: constants.$themeColor3;
+        }
+    }
+}

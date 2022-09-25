@@ -1,0 +1,52 @@
+@use "constants";
+
+@mixin roundedBtn($color) {
+  color: white;
+  background-color: $color;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: darken($color, 10%)
+  }
+}
+
+@mixin squareButton($color) {
+  @include roundedBtn($color);
+  padding: 5px;
+  width: fit-content;
+  height: fit-content;
+  font-size: 0;
+
+  * {
+    font-size: 18px;
+  }
+}
+
+@mixin submitBtn {
+  @include roundedBtn(darken(constants.$themeColor3, 15%));
+  font-weight: bold;
+  border: 1px solid darken(constants.$themeColor3, 25%);
+  padding: 8px 16px;
+}
+
+@mixin postItem {
+  margin: 16px 0;
+  border-radius: 8px;
+  background-color: #f5f9f9;
+  box-shadow: 0 0 5px 0 #bbb;
+
+  &>div {
+    padding: 8px 12px;
+  }
+
+  &>div:first-child {
+    border-bottom: 1px solid #b6c5c9;
+  }
+
+  &>div:last-child {
+    border-top: 1px solid #b6c5c9;
+  }
+}

@@ -1,0 +1,75 @@
+@use "constants";
+@use "mixins";
+
+html,
+body,
+#__next {
+  padding: 0;
+  margin: 0;
+  min-height: fit-content;
+  min-width: fit-content;
+  font-family: Cantarell, Helvetica Neue, sans-serif;
+}
+
+body {
+  background-color: constants.$themeColor1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 40px;
+  margin-top: 0;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+hr {
+  border: none;
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+textarea {
+  border: {
+    width: 1px;
+    style: solid;
+    color: #aaa;
+    radius: 4px;
+  }
+
+  padding: 8px;
+  padding-top: 10px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  @include mixins.submitBtn;
+}
+
+select {
+  display: block;
+  margin-top: 6px;
+  padding: 2px;
+  border-radius: 4px;
+  border-color: #aaa;
+  background-color: white;
+}
+
+textarea {
+  font-family: unset;
+  resize: vertical;
+  width: 100%;
+}

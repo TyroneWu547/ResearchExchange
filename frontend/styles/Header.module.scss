@@ -1,0 +1,53 @@
+@use "constants";
+
+.header {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: constants.$themeColor4;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.headerPrimary {
+  margin: 0px;
+  display: flex;
+  align-items: center;
+
+  * {
+    margin-left: 20px;
+  }
+}
+
+.title {
+  margin-right: 20px;
+  font-size: 32px;
+}
+
+.searchBar {
+  margin: 0 20px;
+}
+
+.searchBar input {
+  width: 35vw;
+}
+
+.authLinks {
+  display: flex;
+  align-items: center;
+
+  &>* {
+    margin-right: 20px;
+  }
+}
+
+.logoutButton {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}

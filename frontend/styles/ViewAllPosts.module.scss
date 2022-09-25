@@ -1,0 +1,62 @@
+@use "mixins";
+@use "constants";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .postArticleButton {
+    @include mixins.submitBtn;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+}
+
+.filtersContainer {
+  background-color: rgb(239, 245, 247);
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  .filterSubmit {
+    margin-top: 20px;
+  }
+}
+
+.filters {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.fieldSelect {
+  width: 200px;
+}
+
+.filterLabel {
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 0;
+}
+
+.tagSelection {
+  font-size: 14px;
+  width: 395px;
+
+  input {
+    font-size: 14px;
+    padding: 6px;
+  }
+}
+
+.noneFound {
+  text-align: center;
+  margin-top: 40px;
+}

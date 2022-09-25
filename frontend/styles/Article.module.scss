@@ -1,0 +1,154 @@
+@use "constants";
+@use "mixins";
+
+.article {
+  display: flex;
+  align-items: flex-start;
+}
+
+.articleInfo {
+  margin-right: 40px;
+  min-width: 0;
+}
+
+.articleTitle {
+  font-size: 30px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.abstract {
+  text-align: justify;
+}
+
+.noUrlProvided {
+  color: gray;
+}
+
+.linkMargin {
+  margin-right: 10px;
+}
+
+.subject {
+  margin-top: 0;
+  font-weight: bold;
+  padding: 6px 8px;
+  border-radius: 14px;
+  width: fit-content;
+  background-color: rgb(3, 125, 182);
+  color: white;
+}
+
+.approvedMessage {
+  font-size: 20px;
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.approvedStatIcon {
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 4px;
+}
+
+.documentPreview {
+  margin-left: auto;
+  flex: none;
+  display: block;
+  padding: 5px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 0 #bbb;
+  border: 1px solid #999;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  hr {
+    margin-left: -5px;
+    margin-right: -5px;
+    color: #999;
+  }
+
+  .viewArticle {
+    display: block;
+    text-align: center;
+    margin: 5px;
+  }
+}
+
+.links {
+  color: rgb(2, 87, 116);
+
+  b {
+    display: inline-block;
+    width: 135px;
+  }
+
+  a {
+    color: rgb(12, 150, 196);
+    text-decoration: underline;
+  }
+
+  &>div {
+    width: 600px;
+    margin: 7px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.authorLink {
+  color: constants.$themeColor3;
+}
+
+.createContentBtn {
+  @include mixins.submitBtn;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.writeCommentTitle {
+  margin: 0;
+}
+
+.linkIcon {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  margin-bottom: -4px;
+}
+
+.multiElement {
+  display: block;
+  margin: 10px 0;
+  padding: 0;
+
+  .multiLabel {
+    display: inline-block;
+    margin: 0;
+    margin-right: 10px;
+  }
+
+  li {
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 10px;
+    padding: 5px 8px;
+    border-radius: 6px;
+    background-color: lightblue;
+  }
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+
+  gap: 50px;
+}
+
+.sectionDivider {
+  margin: 40px 0;
+}

@@ -1,0 +1,29 @@
+.uncompressedScore {
+  max-width: 60px;
+  flex: none;
+  width: 50px;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 20px;
+  margin-left: -10px;
+}
+
+.compressedScore {
+  display: flex;
+  align-items: center;
+
+  .scoreVote {
+    font-size: 18px;
+    margin: 0 4px 2px 4px;
+  }
+}
+
+.scoreVote {
+  font-size: 24px;
+  color: #444;
+
+  &:hover {
+    cursor: pointer;
+    color: #222;
+  }
+}

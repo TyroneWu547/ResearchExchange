@@ -1,0 +1,6 @@
+datasources:
+  default:
+    ocid: ocid1.autonomousdatabase.oc1.iad.anuwcljtsm4floqa7zeh3bdl7wdib544xkob4wd74npzkrxexr4xcp624riq
+    walletPassword: ${admin-atp-password}
+    username: userdataaccess
+    password: ${userdataaccess-atp-password}

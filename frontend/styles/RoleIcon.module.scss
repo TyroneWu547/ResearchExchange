@@ -1,0 +1,28 @@
+.roleIcon {
+  display: inline-block;
+  border: none;
+  border-radius: 6px;
+  padding: 3px 6px;
+  margin-right: 6px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.inProfile {
+  margin-left: 10px;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+.expert {
+  background-color: rgb(58, 140, 194);
+}
+
+.admin {
+  background-color: rgb(212, 144, 41);
+}
+
+.author {
+  background-color: rgb(50, 184, 45);
+}

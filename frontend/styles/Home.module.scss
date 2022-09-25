@@ -1,0 +1,156 @@
+.card {
+  text-align: center;
+
+  h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  hr {
+    color: #999;
+    margin: 50px 0px 50px 0px;
+  }
+}
+
+.intro {
+  .introContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .images {
+    margin-right: 50px
+  }
+
+  .text {
+    text-align: left;
+    flex: 1 0 40%;
+  }
+}
+
+.browse {
+  .topThree {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    .documentPreviewContainer {
+      margin: 20px;
+      display: block;
+      padding: 5px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px 0 #bbb;
+      border: 1px solid #999;
+      height: 320px;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      .documentPreview {
+        opacity: .3;
+      }
+
+      .articleNameContainer {
+        position: absolute;
+        top: 900px;
+        transform: translate(15px, -35%);
+        width: 180px;
+        color: #444;
+        font-size: 18px;
+        text-align: center;
+        margin: 10px;
+        font-weight: bold;
+        color: rgb(0, 110, 146);
+      }
+    }
+  }
+}
+
+.pillars {
+  .threeColumns {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+.instructions {
+  .instructionContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+  }
+
+  .numbers {
+    margin-right: 50px;
+  }
+
+  .images {
+    margin-right: 50px;
+  }
+
+  .text {
+    flex: 0 1 50%;
+  }
+}
+
+.community {
+  .left {
+    .feature {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin-top: 50px;
+    }
+
+    .image {
+      margin-right: 50px;
+    }
+
+    .text {
+      flex: 1 0 50%;
+    }
+
+    li {
+      text-align: left;
+    }
+
+    h3 {
+      text-align: center;
+    }
+  }
+
+  .right {
+    .feature {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 50px 0px 50px 0px;
+    }
+
+    .text {
+      flex: 1 0 50%;
+    }
+
+    .image {
+      margin-left: 50px;
+    }
+
+    li {
+      text-align: left;
+    }
+
+    h3 {
+      text-align: center;
+    }
+  }
+}

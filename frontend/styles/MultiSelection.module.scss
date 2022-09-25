@@ -1,0 +1,68 @@
+@use "mixins";
+
+.multipleSelectionPostArticle {
+  padding: 10px;
+  border: 1px solid #888;
+  background-color: #f8f8f8;
+  border-radius: 6px;
+}
+
+.multipleSelectionFilters {
+  .noSelected {
+    display: none;
+  }
+}
+
+.selectedItems {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding: 5px 8px;
+    border-radius: 6px;
+    background-color: rgb(178, 214, 226);
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(126, 198, 223);
+    }
+
+    * {
+      display: inline;
+      vertical-align: middle;
+    }
+  }
+}
+
+.noSelected {
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.textWithButton {
+  display: flex;
+  align-items: center;
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    @include mixins.squareButton(rgb(41, 189, 22));
+    margin-left: 8px;
+
+    &:disabled {
+      background-color: #999;
+      color: #ddd;
+
+      &:hover {
+        cursor: auto;
+        opacity: 1;
+      }
+    }
+  }
+}

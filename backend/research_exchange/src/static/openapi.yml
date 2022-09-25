@@ -1,0 +1,171 @@
+components:
+  schemas:
+    Article:
+      properties:
+        score:
+          type: integer
+        date:
+          type: string
+        content:
+          type: string
+        pseudonym:
+          type: string
+        tag:
+          type: string
+        mainfield:
+          type: string
+        mainfield:
+          type: string
+      type: object
+info:
+  description: API Docs
+  title: API Docs
+  version: 1.0.0
+openapi: 3.0.2
+paths:
+  /api/login:
+    post:
+      description: Logs in a user 
+      requestBody:
+      responses:
+        '201':
+          description: Logged in successfully
+          content:
+            application/json:
+              schema:
+                type: integer
+  /api/signup:
+    post:
+      description: Signs up a user 
+      requestBody:
+      responses:
+        '201':
+          description: Signed up successfully
+          content:
+            application/json:
+              schema:
+                type: integer
+  /api/articles:
+    get:
+      description: Get all the articles
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Articles'
+        '404':
+          description: Articles not found
+
+  /api/articles/{query_parameter}:
+    get:
+      description: Get an article filtered by query parameter (tag, subject, subsubject, query, approved)
+      parameters:
+        - in: path
+          name: query_parameter
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Article'
+        '404':
+          description: Article not found
+  /api/articles/{id}:
+    get:
+      description: Get an article by id
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Article'
+        '404':
+          description: Article not found
+
+  /api/article:
+    post:
+      description: Create an article 
+      requestBody: Article
+      responses:
+        '201':
+          description: Article posted successfully
+          content:
+            application/json:
+              schema:
+                type: integer
+
+  /api/authors/{author_id}/papers:
+    get:
+      description: Get all papers by author
+      parameters:
+        - in: path
+          name: author_id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Paper'
+        '404':
+          description: Author not found
+  /api/posts/{post_id}/comment:
+    post:
+      description: Add a comment on an article
+      parameters:
+        - in: path
+          name: post_id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Comment added successfully
+        '404':
+          description: Comment not added
+  /api/posts/{post_id}/review:
+    post:
+      description: Start an expert review
+      parameters:
+        - in: path
+          name: post_id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Review started successfully
+        '404':
+          description: Review not started
+  /api/vote/{post_id}:
+    post:
+      description: Vote on a post
+      parameters:
+        - in: path
+          name: post_id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful operation
+        '404':
+          description: Unsuccessful Operation

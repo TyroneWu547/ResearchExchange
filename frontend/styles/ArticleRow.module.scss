@@ -1,0 +1,91 @@
+@use "mixins";
+@use "constants";
+
+.article {
+  @include mixins.postItem;
+}
+
+.titleSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  * {
+    margin: 0;
+  }
+}
+
+.datePosted {
+  white-space: nowrap;
+}
+
+@mixin tag {
+  display: inline-block;
+  font-size: 14px;
+  padding: 5px 8px;
+  border-radius: 6px;
+}
+
+.subject {
+  @include tag;
+  margin: 0;
+  font-weight: bold;
+  width: fit-content;
+  background-color: constants.$themeColor3;
+  color: white;
+}
+
+.scoreAndReviews {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  * {
+    margin: 0;
+  }
+}
+
+.expertReviews {
+  display: block;
+}
+
+.tags {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
+  li {
+    @include tag;
+    margin-left: 10px;
+    background-color: lightblue;
+  }
+}
+
+.articleTitle {
+  display: block;
+  color: constants.$themeColor3;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.articleAbstract {
+  margin: 0 0 10px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.statusInfo {
+  margin-left: 14px;
+  display: inline-block;
+}
+
+.statIcon {
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 4px;
+}

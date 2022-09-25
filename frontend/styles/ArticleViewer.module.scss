@@ -1,0 +1,15 @@
+.pdfContainer {
+  width: 100%;
+  overflow: auto;
+}
+
+.pageContainer {
+  width: 1000px;
+  position: relative;
+  margin: 20px auto;
+  box-shadow: 0 0 10px 0 #bbb;
+}
+
+.pdfPage {
+  width: 1000px;
+}

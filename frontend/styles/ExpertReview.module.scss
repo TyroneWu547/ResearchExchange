@@ -1,0 +1,67 @@
+.expertReview {
+  display: flex;
+  align-items: flex-start;
+}
+
+.expertReviewMetadata {
+  width: 120px;
+  text-align: center;
+  flex: none;
+}
+
+.statusIcon {
+  font-size: 50px;
+}
+
+.status {
+  margin-top: 2px;
+  font-size: 18px;
+}
+
+.editStatusButton {
+  padding: 4px 6px 2px 6px;
+  margin: 0 4px;
+  font-size: 16px;
+  border-radius: 6px;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.documentPreviewContainerContainer {
+  display: inline-block;
+  margin-left: auto;
+}
+
+.documentPreviewContainer {
+  margin-left: 40px;
+  padding: 5px 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 0 #ddd;
+  border: 1px solid #ccc;
+  position: relative;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.documentPreview {
+  opacity: 0.3;
+}
+
+.inlineCommentsNote {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  color: #444;
+  font-size: 18px;
+  text-align: center;
+
+  .viewDoc {
+    margin-top: 10px;
+    font-weight: bold;
+    color: rgb(0, 110, 146);
+  }
+}

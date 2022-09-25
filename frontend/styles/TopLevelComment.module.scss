@@ -1,0 +1,56 @@
+@use "constants";
+
+.topLevelCommentContainer {
+  min-width: 0;
+  display: flex;
+}
+
+.topLevelCommentWithReplies {
+  width: 100%;
+}
+
+.followupComment {
+  margin: 16px 0;
+  display: flex;
+
+  border-top: 1px solid #8aa;
+  padding-top: 16px;
+}
+
+.postMetaData {
+  margin-top: 0;
+}
+
+.content {
+  margin-top: 0;
+  text-align: justify;
+}
+
+.belowContent {
+  display: flex;
+
+  button {
+    margin-left: 10px;
+  }
+}
+
+.expandFollowups {
+  width: 60%;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  background-color: #eee;
+  text-align: center;
+  padding: 5px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #ddd;
+  }
+}
+
+.authorLink {
+  font-weight: bold;
+  color: constants.$themeColor3;
+}

@@ -1,0 +1,246 @@
+@use "constants";
+@use "mixins";
+
+$borderColor: #8aa;
+
+.documentCommenter {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+.link {
+  color: constants.$themeColor3;
+}
+
+.commentsBar {
+  flex-shrink: 0;
+  width: 500px;
+  padding: 0;
+  overflow: auto;
+  background-color: white;
+  box-shadow: 0 0 5px 0 #bbb;
+  overflow: auto;
+
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+    padding: 10px;
+    background-color: rgb(224, 235, 235);
+  }
+
+  hr {
+    margin: 0;
+    border-color: $borderColor;
+  }
+}
+
+.editStatusButton {
+  padding: 6px 8px 2px 8px;
+  margin: 0 6px;
+  font-size: 20px;
+  border-radius: 6px;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.createReviewForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.commentBarItem {
+  margin: 0;
+  padding: 16px;
+}
+
+.blinkAnimationComment {
+  animation: 1s blinkComment;
+}
+
+@keyframes blinkComment {
+  0% {
+    background-color: rgba($color: yellow, $alpha: 0);
+  }
+
+  50% {
+    background-color: rgba($color: yellow, $alpha: 0.5);
+  }
+
+  100% {
+    background-color: rgba($color: yellow, $alpha: 0);
+  }
+}
+
+.blinkAnimationHighlight {
+  div {
+    animation: 1.5s blinkHighlight;
+  }
+}
+
+@keyframes blinkHighlight {
+  0% {
+    background-color: rgba($color: red, $alpha: 0);
+  }
+
+  50% {
+    background-color: rgba($color: red, $alpha: 0.5);
+  }
+
+  100% {
+    background-color: rgba($color: red, $alpha: 0);
+  }
+}
+
+.referencingSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #267;
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  button {
+    @include mixins.squareButton(rgb(240, 140, 140));
+    padding: 4px;
+    margin-left: 10px;
+  }
+}
+
+.addCommentBtn {
+  position: absolute;
+  z-index: 2;
+}
+
+.mainCommentTextArea {
+  height: 200px;
+}
+
+.inlineCommentTextArea {
+  height: 80px;
+}
+
+.submitReviewSection {
+  width: 100%;
+  text-align: center;
+  bottom: 10px;
+
+  hr {
+    margin: 0 -16px;
+  }
+
+  input[type=submit] {
+    width: 100%;
+  }
+}
+
+.selectStatus {
+  margin-top: 0;
+}
+
+.statuses {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  margin: 30px;
+  margin-top: 15px;
+  justify-content: space-between;
+}
+
+.statusContainer {
+  &:hover {
+    cursor: pointer;
+  }
+
+  input[type=radio] {
+    display: none;
+  }
+
+  .status {
+    padding: 10px;
+    border-radius: 6px;
+    border-width: 1px;
+    border-style: solid;
+    opacity: 0.4;
+    color: black;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+  }
+
+  input[type=radio]:checked~.status {
+    opacity: 1;
+    border-width: 2px;
+  }
+}
+
+.acceptStatusButton {
+  $color: rgb(131, 221, 131);
+  background-color: $color;
+  border-color: darken($color, 20%);
+}
+
+.needsWorkStatusButton {
+  $color: rgb(240, 202, 121);
+  background-color: $color;
+  border-color: darken($color, 20%);
+}
+
+.rejectStatusButton {
+  $color: rgb(218, 108, 108);
+  background-color: $color;
+  border-color: darken($color, 20%);
+}
+
+.pdfContainer {
+  width: 100%;
+  overflow: auto;
+
+  ::selection,
+  ::-moz-selection {
+    background: rgb(255, 255, 104);
+    color: black;
+  }
+}
+
+.pageContainer {
+  width: 1000px;
+  position: relative;
+  margin: 20px auto;
+  box-shadow: 0 0 10px 0 #bbb;
+}
+
+.pdfPage {
+  width: 1000px;
+}
+
+.highlightGroup {
+  opacity: 0.3;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}
+
+.highlight {
+  position: absolute;
+  background-color: yellow;
+  z-index: 1;
+}
+
+.reviewStatus {
+  margin-top: 10px;
+  font-size: 18px;
+}

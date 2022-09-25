@@ -1,0 +1,99 @@
+@use "mixins";
+@use "constants";
+
+.before {
+  li {
+    margin: 16px 0px;
+  }
+}
+
+.section {
+  font-size: 30px;
+  color: constants.$themeColor4;
+}
+
+.requiredLabel {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.requiredLabel::after {
+  font-weight: bold;
+  font-size: 16px;
+  content: " *";
+  color: red;
+}
+
+.upload {
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.postTextField {
+  font-size: 16px;
+  font-weight: bold;
+
+  label {
+    display: block;
+    margin-top: 16px;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  textarea {
+    height: 100px;
+    width: 100%;
+    margin-top: 16px;
+  }
+}
+
+.info {
+  font-size: 16px;
+  font-weight: normal;
+  color: #888;
+
+  a {
+    color: constants.$themeColor4;
+    text-decoration: underline;
+
+    &:hover {
+      color: constants.$themeColor3;
+    }
+  }
+}
+
+.subjectSelection {
+  margin-top: 16px;
+  display: flex;
+
+  div {
+    width: 50%;
+  }
+}
+
+.selectSubject {
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.tags {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+.additionalLinks {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.submitPost {
+  margin-top: 40px;
+  display: block;
+}
+
+.errorMessage {
+  color: red;
+}
