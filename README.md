@@ -1,6 +1,6 @@
-# ResearchExchange
+# 🔬 ResearchExchange
 
-## Project Configuration
+## Project Configuration 🚧
 
 Our frontend server does not take any special configuration to deploy if you are running the frontend on the same instance as the backend; as long as the machine has a v12 or newer Node.js installation and installs all the dependencies listed in `package.json` using `npm i`, the frontend server will run just by calling `npm run build` followed by `npm run start`. Further instructions are listed further below. 
  
@@ -65,9 +65,9 @@ ResearchExchange
     |   |   +- api.ts
 ```
 
-## Building Frontend and Backend Environment
+## 🖥️ Building Frontend and Backend Environment
 
-### Provisioning Backend Server
+### Provisioning Backend Server 
 
 <ins>Note:</ins> The commands below are run on an **Oracle Linux 8** image with the **AMD64** shape. However, you may modify the commands to fit your distributions package manager and [graalvm download](https://github.com/graalvm/graalvm-ce-builds/releases). 
 
@@ -129,7 +129,7 @@ $ npm i
 $ npm run build
 ```
 
-## Deploying the Application
+## 🪂 Deploying the Application 
 
 ### Backend
 
@@ -157,7 +157,7 @@ ready - started server on 0.0.0.0:3000, url: http://localhost:3000
 
 The application can how be reached through `http://<frontend-ip>:3000`.
 
-## Common Error
+## 🧰 Common Error
 
 Depending on the distribution you are running on, the built-in firewall may be configured to block any traffic from coming into your virtual machine. The following commands below can be executed to open the port.
 
