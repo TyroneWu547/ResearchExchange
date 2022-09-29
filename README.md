@@ -157,7 +157,7 @@ ready - started server on 0.0.0.0:3000, url: http://localhost:3000
 
 The application can how be reached through `http://<frontend-ip>:3000`.
 
-## 🧰 Common Error
+## 😵‍ Common Error
 
 Depending on the distribution you are running on, the built-in firewall may be configured to block any traffic from coming into your virtual machine. The following commands below can be executed to open the port.
 
