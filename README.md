@@ -69,7 +69,7 @@ ResearchExchange
 
 ### Provisioning Backend Server 
 
-<ins>Note:</ins> The commands below are run on an **Oracle Linux 8** image with the **AMD64** shape. However, you may modify the commands to fit your distributions package manager and [graalvm download](https://github.com/graalvm/graalvm-ce-builds/releases). 
+<ins>Note:</ins> The commands below are run on an **Oracle Linux 8** image with the **AMD64** shape. However, you may need modify the commands to fit your distros package manager and [graalvm download](https://github.com/graalvm/graalvm-ce-builds/releases). 
 
 ```bash
 # Update package manager.
