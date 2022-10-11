@@ -2,7 +2,7 @@
 
 ## Project Configuration 🚧
 
-Our frontend server does not take any special configuration to deploy if you are running the frontend on the same instance as the backend; as long as the machine has a v12 or newer Node.js installation and installs all the dependencies listed in `package.json` using `npm i`, the frontend server will run just by calling `npm run build` followed by `npm run start`. Further instructions are listed further below. 
+Our frontend server does not take any special configuration to deploy if you are running the frontend on the same instance as the backend; as long as the machine has a v12 or newer Node.js installation and installs all the dependencies listed in `package.json` using `npm i`, the frontend server will run just by calling `npm run build` followed by `npm run start`. 
  
 The backend server/API, however, requires special configuration relevant to Oracle Cloud deployment. In order for the application to access any of the OCI resources, the user needs to create a local configuration file, `~/.oci/config`, in which the contents of the file are provided by creating an API key from your User Settings in Oracle Cloud.
 
